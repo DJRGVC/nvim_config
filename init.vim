@@ -179,6 +179,8 @@ Plug 'tpope/vim-surround'
 " https://github.com/tpope/vim-vinegar
 Plug 'tpope/vim-vinegar'
 
+Plug 'preservim/nerdtree'
+
 " https://github.com/APZelos/blamer.nvim
 Plug 'APZelos/blamer.nvim'
 

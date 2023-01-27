@@ -11,6 +11,65 @@ def env(name):
 
 endglobal
 
+# my snips
+
+snippet prf "Proof" bA
+\pf{$1} {
+	$0
+}
+endsnippet
+
+snippet soln "Solution" bA
+\begin{solution}
+	$0
+\end{solution}
+endsnippet
+
+snippet qs "Question" bA
+\qs{$1} {
+	$0
+}
+endsnippet
+
+snippet sdate "Make Date" bA
+\begin{flushright}
+	\emph{$0}
+\end{flushright}
+endsnippet
+
+snippet itm "New Item" bA
+\item $0
+endsnippet
+
+snippet scount "Set Count" bA
+\setcounter{enumi}{$0}
+endsnippet
+
+snippet enum "Enumerate" bA
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet defn "Definition" bA
+\begin{definition} {$1} { $2 }
+	$0
+\end{definition}
+endsnippet
+
+snippet xmpl "Example" bA
+\begin{example} {$1} { $2 }
+	$0
+\end{example}
+endsnippet
+
+snippet qs "Question" bA
+\qs{$1} {
+	$0
+}
+endsnippet
+
+# end my snips
 
 snippet template "Basic template" b
 \documentclass[a4paper]{article}
@@ -71,11 +130,6 @@ snippet fig "Figure environment" b
 \end{figure}
 endsnippet
 
-snippet enum "Enumerate" bA
-\begin{enumerate}
-	\item $0
-\end{enumerate}
-endsnippet
 
 snippet item "Itemize" bA
 \begin{itemize}
