@@ -13,6 +13,75 @@
 "setlocal spell
 "set spelllang=nl,en_gb
 "inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+"
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+let g:CommandTPreferredImplementation='lua'
+
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+Plugin 'vim-pandoc/vim-rmarkdown'
+
+Plugin 'vim-pandoc/vim-pandoc'
+
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 setlocal spell
 set spelllang=en_us
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
@@ -163,6 +232,10 @@ Plug 'nvim-lua/plenary.nvim'
 "
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+Plug 'hrsh7th/vim-vsnip'
+
+Plug 'hrsh7th/vim-vsnip-integ'
+
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'lervag/vimtex'
@@ -184,6 +257,14 @@ Plug 'preservim/nerdtree'
 " https://github.com/APZelos/blamer.nvim
 Plug 'APZelos/blamer.nvim'
 
+Plug 'vim-pandoc/vim-rmarkdown'
+
+Plug 'vim-pandoc/vim-pandoc'
+
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
+
+
 " https://github.com/fenetikm/falcon/wiki/Installation
 Plug 'fenetikm/falcon'
 
@@ -192,6 +273,10 @@ Plug 'morhetz/gruvbox'
 Plug 'sirver/ultisnips'
 
 Plug 'KeitaNakamura/tex-conceal.vim'
+
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+
+Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 
