@@ -278,9 +278,16 @@ Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 
 Plug 'dense-analysis/ale'
 
+Plug 'github/copilot.vim'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " Initialize plugin system
 
 call plug#end()
+
+nnoremap <C-p> :Files<CR>
 
 let g:deoplete#enable_at_startup = 1
 
